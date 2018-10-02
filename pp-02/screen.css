@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 html{
   font-size: 1.125em;
-  line-heigth: 1.22em;
+  line-height: 1.222em;
   padding: 1.222em 1em;
 }
 
@@ -20,7 +20,7 @@ h2,h3{
 
 /* Paragraphs are idented */
 p{
-  text-indent:
+  text-indent:3em;
 }
 
 /*  H3 heading is italic */
@@ -28,6 +28,6 @@ p{
   font-style:italic;
 }
 /* article id has green background */
-.about-me{
+.about-me {
   background-color: green;
 }
