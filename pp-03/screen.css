@@ -25,9 +25,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   background-color: red;
 }
 
-
 /* ==== LAYOUT STYLES ==== */
+/* Re-order section heading to read One, two, three
 #content {
+  display:flex;
+  flex-flow: column-reverse;
 
 }
 
