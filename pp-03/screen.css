@@ -26,23 +26,36 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 /* ==== LAYOUT STYLES ==== */
-/* Re-order section heading to read One, two, three
+/* Re-order section heading to read One, Two, Three row-wise */
 #content {
   display:flex;
-  flex-flow: column-reverse;
-
+  flex-flow: row-reverse nowrap;
 }
 
+/* Size section elements as squares over viewport */
 #three,
 #two,
 #one {
-
+  height: 100vw;
+  width: 100vw;
 }
 
+/* Change to have one and two atop 3 */
 @media screen and (min-width: 600px) {
 
 }
 
+/* Reverse order and display section elements equally as boxes across viewport */
 @media screen and (min-width: 800px) {
+  #three,
+  #two,
+  #one {
+    height:33.3333vw;
+    width:33.3333vw;
+  }
 
+  #content {
+    display:flex;
+    flex-flow: row-reverse;
+  }
 }
