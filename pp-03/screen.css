@@ -28,7 +28,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* ==== LAYOUT STYLES ==== */
 /* Re-order section heading to read One, Two, Three row-wise */
 #content {
-  display:flex;
+  display: flex;
   flex-flow: row-reverse nowrap;
 }
 
@@ -37,11 +37,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #two,
 #one {
   height: 100vw;
-  width: 100vw;
+  width: 100 vw;
 }
 
 /* Change to have one and two atop 3 */
 @media screen and (min-width: 600px) {
+  #content {
+    display:flex;
+    flex-flow: row-reverse wrap-reverse;
+  }
+  #two,
+  #one {
+    height:50vw;
+    width:50vw;
+  }
+  #three {
+    height:50vw;
+    width:100vw;
+  }
 
 }
 
@@ -52,10 +65,5 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   #one {
     height:33.3333vw;
     width:33.3333vw;
-  }
-
-  #content {
-    display:flex;
-    flex-flow: row-reverse;
   }
 }
