@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 // Return if no JavaScript
 (function() {
   var doorbell;
