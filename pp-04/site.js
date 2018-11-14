@@ -1,20 +1,26 @@
 'use strict';
 // Return if no JavaScript
 (function(){
+  var doorbell;
+  var bell;
   if (typeof document.querySelector === 'undefined') {
     return;
   }
-});
-function ringDoorbell() {
-  console.log('Click Event');
-  var doorbell = new Audio('media/doorbell.mp3');
-  doorbell.play();
-};
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM loaded');
-  //  Check for id in html
-  var bell = document.getElementById("ring-bell");
+  // Declare function to ring door bell
+  function ringDoorbell() {
+    console.log('Click Event');
+    doorbell = new Audio('media/doorbell.mp3');
+    doorbell.play();
+  }
 
-  // Call function to ring bell if id found
-  bell.addEventListener('click', ringDoorbell);
-});
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+    // Add button element to html
+    document.querySelector('#ring').innerHTML =
+     "<button id='door-button'>Ring Doorbell</button>";
+    // Get button element and indicate to ring bell via
+    // function call.
+    bell = document.getElementById("door-button");
+    bell.addEventListener('click', ringDoorbell);
+  });
+})();
