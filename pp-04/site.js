@@ -15,6 +15,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
+    
     // Add button element to html
     document.querySelector('#ring').innerHTML =
      "<button id='door-button'>Ring Doorbell</button>";
