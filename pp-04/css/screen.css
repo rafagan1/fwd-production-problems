@@ -7,8 +7,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* ===== BASE STYLES ===== */
-
-
 img {
   display: block;
   max-width: 100%;
@@ -22,6 +20,22 @@ body {
 
 
 /* ===== MODULAR STYLES ===== */
+.mynav
+#door-button {
+  background: grey;
+}
+button {
+  color: red;
+}
 
-
+#door-button {
+  cursor: pointer;
+}
 /* ===== STATE STYLES ===== */
+.js #dbell, #door-button {
+  display: none;
+}
+.js #dbell, #door-button,
+.mynav.visible {
+  display: block;
+}
