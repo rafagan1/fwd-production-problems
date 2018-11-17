@@ -1,11 +1,7 @@
 'use strict';
 // Return if no JavaScript
 (function() {
-  var doorbell, bell;
-  var mybell;
-  var mynav;
-  var html;
-  var dbutton;
+  var doorbell, bell, mybell, mynav, html, dbutton, txt;
 
   if (typeof document.querySelector === 'undefined') {
     return;
@@ -34,5 +30,13 @@
     mybell.insertBefore(dbutton, mynav);
     bell = document.getElementById("door-button");
     bell.addEventListener('click', ringDoorbell);
+
+    txt = document.querySelector('#other');
+    txt.value = 'Presss Enter or d to ring';
+    txt.addEventListener("keydown", function(e) {
+      if (e.keyCode === 13 || e.keyCode === 68) {
+        ringDoorbell();
+      }
+    });
   });
 })();
