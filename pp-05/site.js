@@ -5,7 +5,8 @@
 var x = 5;
 
 function double(num) {
-  x = num * 2;
+  // Use local var x
+  var x = num * 2;
   return x;
 }
 
